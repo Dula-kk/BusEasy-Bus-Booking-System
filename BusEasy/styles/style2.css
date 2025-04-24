@@ -1,0 +1,251 @@
+.navbar {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+.navbar-toggler i{
+    color:#fff;
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.863);
+    
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ccc !important;
+}
+
+/* Background and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bg {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+.main {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+    width: 50%;
+    height: auto;
+    margin-top: 100px;
+}
+.main h2, .payment-container h2  {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-in-out;
+    color: #000000;
+}
+.main h2:after , .payment-container h2:after {
+    content: '';
+    display: block;
+    margin: 10px auto;
+    width: 80px;
+    height: 4px;
+    background: #000000;
+    border-radius: 2px;
+}
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    animation: bounceIn 0.5s ease-in-out;
+}
+
+.seat.selected {
+    background-color: #000000;
+    color: #fff;
+}
+
+.seat:hover {
+    transform: scale(1.1);
+}
+.seat-reservation {
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* 4 seats per row */
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-content {
+    padding: 20px;
+    animation: fadeInUp 0.5s ease;
+    height: auto;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Blur Effect */
+.blur {
+    filter: blur(5px);
+    pointer-events: none;
+    transition: filter 0.3s ease;
+}
+
+/* Highlight selected bus */
+.bus-active {
+    background-color: rgb(44, 44, 44) !important;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.payment-container {
+    margin-top: 50px;
+    max-width: 500px;
+    margin: 100px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-element {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+#start-recording {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0px 40px rgba(255, 255, 255, 0.973);
+    border-radius: 100%;
+    width: 50px;
+    padding: 10px;
+}
+
+#stop-recording {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0px 40px rgba(0, 0, 0, 0.973);
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    width: 50px;
+    padding: 10px;
+    display: none;
+}
+
+#voice button:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .main, .payment-container{
+        width: 90%;
+        margin-top: 50px;
+        h2{
+            font-size: 24px;
+        }
+        font-size: 10px;
+        h4{
+            font-size: 20px;
+        }
+    }
+    #voice{
+        width: 50%;
+        font-size: 13px;
+    }
+    .modal{
+        width: 90%;
+        margin-left: 20px;
+        margin-top: 70px;
+    }
+}

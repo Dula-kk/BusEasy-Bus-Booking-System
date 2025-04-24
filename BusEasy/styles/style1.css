@@ -1,0 +1,544 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+.navbar-toggler i{
+    color:#fff;
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.863);
+    
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ccc !important;
+}
+
+.carousel-item {
+    height: 600px;
+}
+/* Carousel */
+.carousel-item img {
+    width: auto;
+    object-fit: cover;
+    filter: grayscale(80%);
+    transition: filter 0.5s ease;
+}
+
+.carousel-item img:hover {
+    filter: grayscale(0%);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.479);
+    padding: 20px;
+    margin-bottom: 150px;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    color: #fff;
+}
+
+.carousel-buttons a {
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #fff;
+    border: 2px solid #fff;
+    text-decoration: none;
+}
+
+.carousel-buttons a:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-in-out;
+    color: #fff;
+}
+
+.section h2:after {
+    content: '';
+    display: block;
+    margin: 10px auto;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+#contact h2:after, .login-form h2:after  {
+    content: '';
+    display: block;
+    margin: 10px auto;
+    width: 80px;
+    height: 4px;
+    background: #000000;
+    border-radius: 2px;
+}
+.section p {
+    font-size: 1.2rem;
+}
+
+#contact {
+    padding: 60px 20px;
+    color: #333;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.all-form {
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.459);
+    width: 600px;
+    padding: 20px;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+.all-form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.all-form .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.all-form .form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.all-form .btn-primary {
+    background-color: #000;
+    border-color: #000;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+}
+
+.all-form .btn-primary:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+#services {
+    padding: 60px 20px;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #333;
+    position: relative;
+}
+
+#services h2:after {
+    content: '';
+    display: block;
+    margin: 10px auto;
+    width: 80px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+}
+
+.service-card {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.service-card:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover h5, .service-card:hover p {
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer .social-icons {
+    margin-bottom: 20px;
+}
+
+.footer .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer .social-icon:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ddd;
+}
+
+.footer-details {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Background and Blur Effect */
+.bg-img {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 1;
+}
+
+/* Login Form */
+#login-section {
+    position: relative;
+    z-index: 2;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.85); /* Transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0px 100px rgba(255, 255, 255, 0.753);
+    width: 50%; /* Increased width */
+    padding: 30px; /* Adjust padding */
+    border: #000 2px solid;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-form h2 {
+    font-size: 2rem;
+    color: #000; /* Changed to black */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.login-form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+#login-section{
+    width: 100%;
+}
+.login-form .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form .form-control:focus {
+    border-color: #000; /* Changed to black */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-form .signup-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000; /* Changed to black */
+    transition: color 0.3s;
+}
+
+.login-form .signup-link:hover {
+    color: #555; /* Lighter shade of black */
+    text-decoration: underline;
+}
+
+.login-form .btn-primary {
+    background-color: #000; /* Changed to black */
+    border-color: #000; /* Changed to black */
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+}
+
+.login-form .btn-primary:hover {
+    background-color: #333; /* Lighter shade of black */
+    transform: scale(1.05);
+}
+/* Black Radio Buttons */
+.form-check-input {
+    appearance: none; /* Remove default styling */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000; /* Black border */
+    border-radius: 50%; /* Make it circular */
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-check-input:checked {
+    background-color: #000; /* Black fill when checked */
+    border-color: #000; /* Ensure border remains black */
+    transform: scale(1.1); /* Slightly enlarge on select */
+}
+
+.form-check-input:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker shade on hover */
+}
+
+.form-hidden {
+    display: none;
+}
+.moveTop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 0 8px rgba(255, 252, 252, 0.774);
+}
+.moveTop:hover{
+    transform: scale(1.1); 
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .login-form h2 {
+        font-size: 20px;
+    }
+    .login-form label {
+        font-size: 20px;
+    }
+    .service-card {
+        margin-bottom: 20px;
+    }
+    #login-section{
+        width: 100%;
+    }
+    #contact {
+        padding: 40px 15px;
+    }
+    #signup{
+        margin-top: 50px;
+    }
+    .all-form {
+        padding: 20px;
+        width: 90%;
+    }
+    .all-form h2{
+        font-size: 20px;
+    }
+    .carousel-item img {
+        height: 600px;
+    }
+    .carousel-caption {
+        padding: 20px;
+        width: 70%;
+        height: auto;
+        font-size: 12px;
+        margin-bottom: 35%;
+    }
+    .login-form .form-check{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .carousel-caption h1{
+        font-size: 20px;
+    }
+    
+    .carousel-caption h5{
+        font-size: 15px;
+    }
+    .section {
+        padding: 40px 15px;
+    }
+    .section h2, #services h2, #contact h2, .login-form{
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    .service-card {
+        height: auto;
+    }
+    .section p{
+        font-size: 15px;
+    }
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight slide-up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
